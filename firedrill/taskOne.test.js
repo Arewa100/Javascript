@@ -1,5 +1,7 @@
 const {sumOfEvenNumbers, findMax, countOddNumbers, isPrime, findFirstDuplicate, reverse, factorial, isPalindrome, isLeapYear, sumMultiplesOfThreeAndFive} = require('./functions');
 
+const {objectLogger, increment, fullName, stringFormater} = require('./objects');
+
 
 test("testing if function can output sum of even numbers", ()=> {
 	let givenArray = [2, 4, 5, 1, 7, 8, 10];
@@ -142,7 +144,49 @@ test("testing to check the sum of multiples of three and five below a given numb
 	expect(result).toBe(expected);
 })
 
+test("testing that function objectLogger can loop through objects and display its key value pair in a tabular form", ()=> {
+	const car = {
+		make: 'Toyota', 
+		model: 'camry', 
+		year: 2021
+	}
+
+	let result = objectLogger(car);
+	let expected = "make:Toyota model:camry year:2021 ";
+	expect(result).toEqual(expected);
+	
+})
 
 
+test("testing that function can increment and decrement count", ()=> {
+	//let step = 1;
+	//let result = counter(step);
+	let result = increment();
+	let expected = 1;
+	expect(result).toEqual(expected)
+})
 
+
+test("testing that function can return full name", ()=> {
+	const person = {
+		firstName: "Olamide",
+		lastName: "Williams"
+	}
+
+	let result = fullName(person);
+	let expected = "Olamide Williams";
+	expect(result).toBe(expected);
+})
+
+test("testing that the object person 2 can return strng format", ()=> {
+	const person = {
+		firstName: "Olamide",
+		lastName: "Williams",
+		age: 20
+	}
+
+	let result = stringFormater(person);
+	let expected = "First Name: Olamide, Last Name: Williams, Age: 20";
+	expect(result).toBe(expected);
+})
 
