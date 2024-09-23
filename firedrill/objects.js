@@ -19,17 +19,19 @@ function objectLogger(collectionOfKeyValuePairs) {
 	return result;
 }
 
-const counter = {
-	count: 0,
-	step: 1,
-	increment: function() {
-		this.count = this.count + this.step;
-			return this.count;
-		}, 
-	decrement: function() {
-		this.count = this.count - this.step;
-		}	
-}
+// const counter () { 
+// 	return { 
+// 		count: 0,
+// 		step: 1,
+// 		increment: function() {
+// 			this.count = this.count + this.step;
+// 				return this.count;
+// 			}, 
+// 		decrement: function() {
+// 			this.count = this.count - this.step;
+// 		}
+// 	};	
+// }
 
 function fullName(personObject) {
 	const{firstName, lastName} = personObject;
@@ -44,9 +46,4 @@ function stringFormater(personObject) {
 }
 
 
-
-module.exports = {objectLogger, increment, fullName, stringFormater};
-
-console.log(counter().count)
-counter().increment()
-console.log(counter().count)
+module.exports = {objectLogger, fullName, stringFormater};
