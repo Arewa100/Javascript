@@ -12,10 +12,10 @@
 // let sliced = arrayOfNumbers.slice(-1)
 // console.log(sliced);
 
-// // let givenArray = [1, 3, 4, 6 , 7 ,8]
-// // let answer = givenArray.splice(1, 5)
-// let givenArray = [1, 3, 4, 6]
-// let arr = [22, 44, 55]
+let givenArray = [1, 3, 4, 6 , 7 ,8]
+let answer = givenArray[0, 2]
+let arr = [22, 44, 55]
+console.log(answer)
 
 // let answer = givenArray.splice(1, 0, 6, 9, ...arr)
 // console.log(givenArray)

@@ -11,4 +11,54 @@ function arrayManipulator(arrayInput) {
 
 console.log(arrayManipulator([2,3, 4, 5, 6, 7]));
 
-module.exports = {arrayManipulator};
+
+
+const numberIncrementer = (arrayOfNumbers)=> {
+    let numberString = "";
+    arrayOfNumbers.forEach((number)=>{
+        numberString = numberString + String(number);
+    })
+    let number= Number(numberString) + 1;
+    let newStringedNumber = String(number);
+    let arrayOfString = [];
+    for(let character of newStringedNumber) {
+        arrayOfString.push(Number(character))
+    }
+
+    return arrayOfString;
+}
+
+
+let largestNumbers = (arrayOfNumbers)=> {
+    let theHigestNumbers = [];
+    let max = 0;
+    let count = 1;
+
+
+    while(count <= 2) {
+        max = 0;
+        for(index in arrayOfNumbers) {  
+            if(max < arrayOfNumbers[index]) {
+                max = arrayOfNumbers[index];
+
+            }
+
+        }
+        
+        for(index in arrayOfNumbers) {
+            if(max == arrayOfNumbers[index]) {
+                arrayOfNumbers[index] = 0;
+             }
+        }
+
+        theHigestNumbers.push(max);
+        count = count + 1;
+    }
+
+    return theHigestNumbers;
+}
+
+
+
+
+module.exports = {arrayManipulator, numberIncrementer, largestNumbers};

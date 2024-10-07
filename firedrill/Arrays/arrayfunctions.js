@@ -26,17 +26,15 @@ let squareOfScores = (listOfScore)=> {
 }
 
 
-let bookDistributor = (listOfMembers)=> {
-    let collectionOfMembers = {};
-    let arrayOfBooks = ["Obi goes to school", "The burning Grass", "The Tempest", "Half of a Yellow sun"]
-    for(member of listOfMembers) {
-        collectionOfMembers[member] = null
-    }
-    for(key in collectionOfMembers) {
-        
-    }
+let bookDistributor = (listOfMembers, arrayOfBooks)=> {
+   collectionOfMembers = {};   // =im here
+   for(member of listOfMembers) {
+        for(book in arrayOfBooks) {
+            collectionOfMembers[member] = arrayOfBooks[book];
+        }
+   }
 
-    return collectionOfMembers
+   return collectionOfMembers
 }
 
 let timeIdentifer = (listOfTime)=> {
